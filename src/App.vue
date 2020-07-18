@@ -2,8 +2,10 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld textoescribepadre="Helowword desde padre a com hijo"/>
   </div>
 </template>
+
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'

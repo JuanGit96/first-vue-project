@@ -27,14 +27,45 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+
+
+    <hr>
+    <h1>
+      HELLOW WORLD QUEMADO EN EL COMPONETE HIJO
+    </h1>
+    <h2>
+      {{ textoescribepadre }}
+    </h2>
+    <h2>
+      {{ texto }}
+    </h2>
+
+    <hr>
+
+    <fieldset>
+      <MiComponete textodinamicoentretemplates="Hola"  />
+    </fieldset>
+
   </div>
 </template>
 
 <script>
+
+import MiComponete from './MiComponente.vue'
+
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    msg: String,
+    textoescribepadre: String
+  },
+  data(){
+    return {
+      texto: "hola mundo desde componente hijo"
+    }
+  },
+  components: {
+    MiComponete
   }
 }
 </script>
